@@ -19,9 +19,13 @@ func helloWorldHandler(c *gin.Context) {
 }
 
 func pdfHandler(c *gin.Context) {
+
+	// get name parameter from url
+	name := c.DefaultQuery("name", "Guest")
+
 	pdf := gofpdf.New("P", "mm", "A4", "")
 	pdf.AddPage()
 	pdf.SetFont("Arial", "B", 16)
-	pdf.Cell(40, 10, "Hello, World!")
+	pdf.Cell(40, 10, name)
 	pdf.Output(c.Writer)
 }
