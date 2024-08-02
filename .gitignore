@@ -1,0 +1,22 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Build
+build/
+bin/
+
+# Dependency directories
+vendor/
+
+# Visual Studio Code
+.vscode/
+
+# Environment variables
+.env
+
+# User
+rest/
